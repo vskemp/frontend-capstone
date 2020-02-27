@@ -15,7 +15,7 @@ class TranslateForm extends Component {
     translate() {
         // console.log(this.state.value);
         // API KEY PURPOSELY LEFT OUT UNTIL DEPLOYMENT WITH BACKEND TO KEEP KEY SECURE. IF YOU WOULD LIKE TO RUN THIS, PLEASE GENERATE YOUR OWN API KEY ON GOOGLE
-        axios.get(`https://translation.googleapis.com/language/translate/v2?target=${cookie.load("language")}&key=AIzaSyA7-BI_fIWVdm36sMAWtqq1m3-VhbNVU7E=${this.state.value}`)
+        axios.get(`https://translation.googleapis.com/language/translate/v2?target=${cookie.load("language")}&key==${this.state.value}`)
             .then(data => {
                 // console.log(data);
                 this.setState({ translated: data.data.data.translations[0].translatedText })
