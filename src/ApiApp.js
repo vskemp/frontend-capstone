@@ -5,7 +5,7 @@ import { googleTranslate } from "./utils/googleTranslate";
 import './ApiApp.css';
 import Image from "./images/lang.png"
 // import axios from 'axios';
-import TranslateForm from './Components/TranslateForm';
+// import TranslateForm from './Components/TranslateForm';
 import Bathroom from './Components/Bathroom';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -18,9 +18,14 @@ import Thank from './Components/Thank';
 import Understand from './Components/Understand';
 import Yes from './Components/Yes';
 import YourName from './Components/YourName';
+import NavBar from './Components/NavBar';
 
 // classes for css editing and refrencing for translated text
 // axios.post('https://translation.googleapis.com/v3/projects/western-dolphin-268714:translateText', { q: this.state.value })
+
+
+
+
 
 
 class ApiApp extends Component {
@@ -62,17 +67,17 @@ class ApiApp extends Component {
             : "I do not understand",
     };
 
-    componentDidMount() {
-        // load all of the language options from Google Translate to your app state
+    // componentDidMount() {
+    // //     // load all of the language options from Google Translate to your app state
 
-        googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
-            getLanguageCodes(languageCodes); // use a callback function to setState
-        });
+    //     googleTranslate.getSupportedLanguages("en", function (err, languageCodes) {
+    //         getLanguageCodes(languageCodes); // use a callback function to setState
+    //     });
 
-        const getLanguageCodes = languageCodes => {
-            this.setState({ languageCodes });
-        };
-    }
+    //     const getLanguageCodes = languageCodes => {
+    //         this.setState({ languageCodes });
+    //     };
+    // }
 
     render() {
         const { languageCodes,
@@ -92,8 +97,9 @@ class ApiApp extends Component {
 
         return (
             <div>
-                <div className="head">
-                    {head}
+                <div>
+                    {/* {head} */}
+                    <NavBar />
                 </div>
                 <div className="salut">
                     <img src={Image} alt="Hello in different languages"></img>
@@ -114,11 +120,11 @@ class ApiApp extends Component {
                     </select>
                 </div>
                 <div>
-                    <TranslateForm />
+                    {/* <TranslateForm /> */}
                 </div>
                 <div className="untranslated">
                     <ul>
-                    <h2>English Common Phrases:</h2>
+                        <h2>English Common Phrases:</h2>
                         <li>Hello, my name is...</li>
                         <li>What is your name?</li>
                         <li>How are you?</li>

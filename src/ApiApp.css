@@ -10,20 +10,30 @@ body {
     justify-content: center;
 }
 
+
 .untranslated {
     display: flex;
     justify-content: center;
 }
 
+.nav {
+    display: flex;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+} 
+/* 
 .head {
     margin: 5px 100px 10px 100px;
     color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     border: dotted white;
     font-size: 30px;
     background-color: lightcoral;
-}
+} */
 
 .untranslated {
 
@@ -64,10 +74,23 @@ footer {
 
 h2 {
     font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
     display: flex;
     justify-content: center;
     color: rgb(70, 69, 69);
+}
+
+h4 {
+    margin: 5px 100px 10px 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: dotted white;
+    font-size: 30px;
+    background-color: lightcoral;
 }

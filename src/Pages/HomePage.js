@@ -1,15 +1,17 @@
-import Footer from '../Components/Footer';
 import React from 'react';
-import NavBar from '../Components/NavBar';
+import SignupForm from './SignupForm';
+import LoginForm from './LoginForm';
+import Footer from '../Components/Footer';
+import Header from '../Components/Header';
+
 
 
 function HomePage() {
     return (
         <div>
-        <Header />  
-        <NavBar />
-
-
+            <Header />
+            <LoginForm />
+            <SignupForm />
             <Footer />
         </div>
     );
