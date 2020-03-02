@@ -1,19 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import NavBar from '../Components/NavBar';
 
-class Login extends React.Comment {
-    render() {
+function LoginSignUp () {
         return (
             <div>
-                <h4>Login/Sign Up</h4>
+                <NavBar />
+                <div className="salut">
+                    <img src={Image} alt="Hello in different languages"></img>
+                </div>
             </div>
         )
     }
-}
 
 
 
 
-export default Login;
+export default LoginSignUp;
 

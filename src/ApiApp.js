@@ -8,7 +8,7 @@ import Image from "./images/lang.png"
 // import TranslateForm from './Components/TranslateForm';
 import Bathroom from './Components/Bathroom';
 import Footer from './Components/Footer';
-import Header from './Components/Header';
+// import Header from './Components/Header';
 import Hello from './Components/Hello';
 import HowAre from './Components/HowAre';
 import No from './Components/No';
@@ -18,7 +18,7 @@ import Thank from './Components/Thank';
 import Understand from './Components/Understand';
 import Yes from './Components/Yes';
 import YourName from './Components/YourName';
-import NavBar from './Components/NavBar';
+// import NavBar from './Components/NavBar';
 
 // classes for css editing and refrencing for translated text
 // axios.post('https://translation.googleapis.com/v3/projects/western-dolphin-268714:translateText', { q: this.state.value })
@@ -35,9 +35,9 @@ class ApiApp extends Component {
         question: cookie.load({ Question })
             ? cookie.load({ Question })
             : "What language would you like the page in?",
-        head: cookie.load({ Header })
-            ? cookie.load({ Header })
-            : "Translator",
+        // head: cookie.load({ Header })
+        //     ? cookie.load({ Header })
+        //     : "Translator",
         statement1: cookie.load({ Statement1 })
             ? cookie.load({ Statement1 })
             : "Translated Common Phrases:",
@@ -83,7 +83,7 @@ class ApiApp extends Component {
         const { languageCodes,
             language,
             question,
-            head,
+            // head,
             statement1,
             hello,
             yourname,
@@ -99,6 +99,7 @@ class ApiApp extends Component {
             <div>
                 <div>
                     {/* {head} */}
+                    {/* <NavBar /> */}
                 </div>
                 <div className="salut">
                     <img src={Image} alt="Hello in different languages"></img>

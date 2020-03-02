@@ -1,25 +1,4 @@
-// import React, {Component} from 'react';
 
-
-
-// class NavBar extends Component {
-//     render() {
-//         return (
-//             <nav>
-//                 <div className="nav">
-//                     <div>
-//                         <a href="users">Login/SignUp </a>
-//                     </div>
-//                         <div className="saved">
-//                         <a href="phrases"> Saved </a> 
-//                         </div>
-//                     </div>
-//             </nav>
-//         );
-//     }
-// };
-
-// export default NavBar;
 
 import React from "react";
 import {
@@ -28,6 +7,8 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import ApiApp from '../ApiApp';
+import Image from "../images/lang.png";
 
 export default function NavBar() {
     return (
@@ -52,12 +33,14 @@ export default function NavBar() {
                 <Switch>
                     <Route path="/login">
                         <Login />
+                        {/* <LoginSignup /> */}
                     </Route>
                     <Route path="/phrases">
                         <Phrases />
                     </Route>
                     <Route path="/">
                         <Home />
+                        <ApiApp />
                     </Route>
                 </Switch>
             </div>
@@ -70,9 +53,21 @@ function Home() {
 }
 
 function Login() {
-    return <h4>Login/Sign Up</h4>;
-}
+    return (
+        <div>
+            <h4>Login/Sign Up</h4>
+            <div className="salut">
+                    <img src={Image} alt="Hello in different languages"></img>
+            </div>
+        </div>
+)};
 
 function Phrases() {
-    return <h4>Saved Phrases</h4>;
-}
+    return (
+        <div>
+            <h4>Saved Phrases</h4>
+            <div className="salut">
+                    <img src={Image} alt="Hello in different languages"></img>
+            </div>
+        </div>
+)};
