@@ -99,7 +99,6 @@ class ApiApp extends Component {
             <div>
                 <div>
                     {/* {head} */}
-                    <NavBar />
                 </div>
                 <div className="salut">
                     <img src={Image} alt="Hello in different languages"></img>
