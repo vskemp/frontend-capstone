@@ -5,7 +5,7 @@ import { googleTranslate } from "./utils/googleTranslate";
 import './ApiApp.css';
 import Image from "./images/lang.png"
 // import axios from 'axios';
-// import TranslateForm from './Components/TranslateForm';
+import TranslateForm from './Components/TranslateForm';
 import Bathroom from './Components/Bathroom';
 import Footer from './Components/Footer';
 // import Header from './Components/Header';
@@ -120,7 +120,7 @@ class ApiApp extends Component {
                     </select>
                 </div>
                 <div>
-                    {/* <TranslateForm /> */}
+                    <TranslateForm />
                 </div>
                 <div className="untranslated">
                     <ul>

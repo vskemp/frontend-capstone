@@ -9,23 +9,31 @@ import {
 } from "react-router-dom";
 import ApiApp from '../ApiApp';
 import Image from "../images/lang.png";
+import LoginForm from '../Pages/LoginForm';
+import Footer from '../Components/Footer';
+
+function changeBackground(e) {
+    e.target.style.color = 'pink';
+}
+
+function changeBackground2(e) {
+    e.target.style.color = 'white';
+}
 
 export default function NavBar() {
     return (
         <Router>
-            <div>
+            <div className="NavLinks">
                 <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
-                        <li>
-                            <Link to="/phrases">Saved</Link>
-                        </li>
-                    </ul>
+                    <div>
+                        <Link to="/" onMouseOver={changeBackground} onMouseLeave={changeBackground2} style={{color:"white", textDecoration:"none", onMouseOver:"pink"}}>Home</Link>
+                    </div>
+                    <div>
+                        <Link to="/login" onMouseOver={changeBackground} onMouseLeave={changeBackground2} style={{color:"white", textDecoration:"none"}}>Login</Link>
+                    </div>
+                    <div>
+                        <Link to="/phrases" onMouseOver={changeBackground} onMouseLeave={changeBackground2} style={{color:"white", textDecoration:"none"}}>Saved</Link>
+                    </div>
                 </nav>
 
                 {/* A <Switch> looks through its children <Route>s and
@@ -59,6 +67,8 @@ function Login() {
             <div className="salut">
                     <img src={Image} alt="Hello in different languages"></img>
             </div>
+            <LoginForm />
+            <Footer />
         </div>
 )};
 
